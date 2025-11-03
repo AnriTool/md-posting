@@ -10,9 +10,9 @@ const postSlug = computed(() => route.params.slug)
 <template>
 	<div class="post-detail">
 		<Post v-if="postSlug" :post-path="postSlug" />
-		<div class="navigation">
-			<router-link to="/" class="back-link"><- Назад</router-link>
-		</div>
+<!--		<div class="navigation">-->
+<!--			<router-link to="/" class="back-link"><- Назад</router-link>-->
+<!--		</div>-->
 	</div>
 </template>
 
