@@ -15,7 +15,7 @@ export default {
 
 		let text: string;
 		if (this.postPath) {
-			const postResponse = await fetch(`/posts/${this.postPath}/${this.postPath}.md`);
+			const postResponse = await fetch(`${import.meta.env.BASE_URL}/posts/${this.postPath}/${this.postPath}.md`);
 			text = await postResponse.text();
 		}
 		else {
@@ -33,7 +33,7 @@ export default {
 
 				return `
 			<figure>
-				<${tag} src="${href}" alt="${text}" controls="controls"> </${tag}>
+				<${tag} src="${import.meta.env.BASE_URL}${href}" alt="${text}" controls="controls"> </${tag}>
 				<figcaption>${text}</figcaption>
 			</figure>
 		`;
